@@ -12,10 +12,16 @@ const app = () => {
         style={styles.image}
       >
         <Text style={styles.title}>Coffee Shop</Text>
+        {/* [86] 메뉴 링크 적용 */}
+        <Link href="/menu" style={{ marginHorizontal: 'auto' }} asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Our Menu</Text>
+          </Pressable>
+        </Link>
 
         <Link href="/contact" style={{ marginHorizontal: 'auto' }} asChild>
           <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Contact Us</Text>
+            <Text style={styles.buttonText}>Contact US</Text>
           </Pressable>
         </Link>
 
@@ -57,10 +63,12 @@ const styles = StyleSheet.create({
   },
   button: {
     height: 60,
+    width: 150, //[88] 버튼 너비 적용
     borderRadius: 20,
     justifyContent: 'center',
     backgroundColor: 'rgba(0,0,0,0.75)',
     padding: 6,
+    marginBottom: 50, //[87] 버튼 하단 마진 적용
   },
   buttonText: {
     color: 'white',
